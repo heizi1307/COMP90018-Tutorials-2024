@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Setting for Fragments
-        Fragment linear_layout = LayoutDemoFragment.newInstance(LayoutDemoFragment.LINEAR_DEMO);
+        Fragment relative_layout = LayoutDemoFragment.newInstance(LayoutDemoFragment.RELATIVE_DEMO);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.layout_fragment, linear_layout)
+                .replace(R.id.layout_fragment, relative_layout)
                 .addToBackStack(null)
                 .commit();
 

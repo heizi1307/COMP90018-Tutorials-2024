@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.firstdemo.databinding.ActivityMain2Binding;
 
@@ -37,6 +39,16 @@ public class Main2Activity extends AppCompatActivity {
                 finish();
             }
         };
+
+        Button button;
+        button = findViewById(R.id.button1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.receivedMessage2.setText("Button1 has been clicked!");
+                Intent intent = new Intent(this, Main2Activity.class);
+            }
+        });
         getOnBackPressedDispatcher().addCallback(this, callback);
     }
 }
